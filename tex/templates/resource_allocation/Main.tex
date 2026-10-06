@@ -1,0 +1,80 @@
+\documentclass[hidelinks, letterpaper,11pt, includefoot, headheight=10mm]{texMemo}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{lipsum}
+
+
+%----------------------------------------------------------------------------------------
+%     Define PSU official colors
+%     https://www.rri.pdx.edu/files/758/psu_identity_standardscolors.pdf
+%----------------------------------------------------------------------------------------
+
+\definecolor{PSUgreen}{RGB}{106,127,16}
+\definecolor{PSUltgreen}{RGB}{168,180,0}
+\definecolor{PSUblue}{RGB}{0,117,154}
+\definecolor{PSUltblue}{RGB}{161,216,224}
+\definecolor{PSUgray}{RGB}{71,67,52}
+\definecolor{PSUBrown}{RGB}{96,53,29}
+\definecolor{PSUsienna}{RGB}{163,63,31}
+\definecolor{PSUred}{RGB}{210,73,42}
+\definecolor{PSUorange}{RGB}{220,155,50}
+\definecolor{PSUyellow}{RGB}{230,220,143}
+\definecolor{PSUtan}{RGB}{232,221,162}
+\definecolor{PSUpurple}{RGB}{101,3,96}
+
+
+%----------------------------------------------------------------------------------------
+%    Watermark
+%----------------------------------------------------------------------------------------
+
+\usepackage{draftwatermark}
+\SetWatermarkText{DRAFT}
+\SetWatermarkScale{1}
+
+%----------------------------------------------------------------------------------------
+%    To:/From:
+%----------------------------------------------------------------------------------------
+
+\memoto{First Name Last Name, Suffix, Title}
+\memofrom{First Name Last Name, Suffix, Title}
+\memosubject{Lab Y Team Resource Allocation Plan}
+\memodate{Month Day, Year}
+\memocc{First Name Last Name, First Name Last Name, Suffix, Title}
+
+\begin{document}
+\pagenumbering{gobble}
+
+%----------------------------------------------------------------------------------------
+%    Header
+%----------------------------------------------------------------------------------------
+\pagestyle{fancy}
+
+\fancyhead[L]{\footnotesize\textcolor{PSUgray}{Department of Electrical \& Computer Engineering \\1900 SW 4th Ave, suite 160 \\ Portland, OR 97201}}
+%\fancyhead[C]{center head}
+\fancyhead[R]{\includegraphics[width=3in]{psulogo_horiz.png}}
+%\lfoot{\includegraphics[test}
+
+%\patchcmd{
+\headrule{\hrule}{\color{PSUgreen}\hrule}{}{}
+\renewcommand{\headrulewidth}{0.4pt}
+
+%----------------------------------------------------------------------------------------
+%    Footer
+%----------------------------------------------------------------------------------------
+\footrule{\hrule}{\color{PSUgreen}\hrule}{}{}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[L]{\footnotesize\color{PSUgray}\sffamily
+\href{https://www.pdx.edu/electrical-computer-engineering/power-engineering-focus}{Power Engineering Laboratory} \textbullet\ Fourth Avenue Building, 1900 SW 4$^{th}$ Ave, suite 25-00, Portland, OR 97201}
+%\fancyfoot[C]{~}
+\fancyfoot[R]{\footnotesize~\newline\color{PSUgray}\sffamily\thepage}
+
+\maketitle
+%\thispagestyle{empty}
+%\pagestyle{empty}
+
+\input{text_goes_here.tex}
+
+\end{document}
