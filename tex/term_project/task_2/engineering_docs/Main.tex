@@ -47,6 +47,10 @@
 \usepackage{subcaption}% Specifies the directory where pictures are stored
 \usepackage[toc, acronym, nopostdot, nonumberlist]{glossaries}
 \usepackage{enumitem}
+\usepackage{booktabs, multirow} % for borders and merged ranges
+\usepackage{soul}% for underlines
+\usepackage{xcolor,colortbl} % for cell colors
+\usepackage{changepage,threeparttable} % for wide tables
 
 \input{glossary}
 
@@ -87,6 +91,7 @@
 {\color{PSUblue}\normalfont\normalsize\bfseries}
 {\color{PSUblue}\thesubsubsection}{1em}{}
 
+
 %----------------------------------------------------------------------------------------
 %  Watermark
 %----------------------------------------------------------------------------------------
@@ -106,7 +111,7 @@
 	\center % Center everything on the page
 
 	\HRule \\[0.4cm]
-	{ \huge \color{PSUgreen}\bfseries Project Title \\[0.4cm] \Large \emph{Project Subtitle}}\\[0.4cm] % Title of your document
+	{ \huge \color{PSUgreen}\bfseries Engineering Documentation \\[0.4cm] \Large \emph{Term Project: Task 2}}\\[0.4cm] % Title of your document
 	\HRule \\[1.0cm]
 
 	\textsc{\large Portland State University \\ Maseeh College of Engineering \& Computer Science \\ Department of Electrical \& Computer Engineering}\\[1.5cm]
@@ -114,8 +119,9 @@
 	\begin{minipage}{0.5\textwidth}
 		\large
 		\emph{Authors:}\\
-		Firstname \textsc{Lastname}\\
-		Firstname \textsc{Lastname}\\
+		William \textsc{Jeffreys}\\
+		Greyland \textsc{Miller}\\
+		Rodney \textsc{Downer}\\
 
 		{\large \today} % Date
 		%{\large June 14, 2021} 
@@ -160,86 +166,94 @@
 \tableofcontents % Include a table of contents
 %\setlength{\parskip}{3ex plus 2ex minus 2ex}
 
-%----------------------------------------------------------------------------------------
-%    Section: List of Figures, Tables, and Glossary
-%----------------------------------------------------------------------------------------
+% %----------------------------------------------------------------------------------------
+% %    Section: List of Figures, Tables, and Glossary
+% %----------------------------------------------------------------------------------------
 \newpage
 \listoffigures
+%
+% \newpage
+% \listoftables
+%
 
-\newpage
-\listoftables
-
-\newpage
-\printglossary[type=\acronymtype]
+% \newpage
+% \printglossary[type=\acronymtype]
 \newpage
 \printglossary
+%
 %----------------------------------------------------------------------------------------
-%    Section: Introduction
+%    Section: Draft Diagram
 %----------------------------------------------------------------------------------------
 \newpage
-\section{Introduction}
-\label{sec:Intro}
-\input{Section_Introduction}
+\section{Draft Diagram}
+\label{sec:draft}
+\input{Section_Draft_Diagram}
 \pagebreak
 
 %----------------------------------------------------------------------------------------
-%   Section: 
-%----------------------------------------------------------------------------------------
-% \newpage
-% \section{Name}
-% \label{sec:}
-% \input{Section_}
-
-
-%----------------------------------------------------------------------------------------
-%   Section: Conclusion
+%   Section: PLC ladder logic diagram
 %----------------------------------------------------------------------------------------
 \newpage
-\section{Conclusion}
-\label{sec:conc}
-\input{Section_Conclusion}
+\section{PLC Ladder Logic Diagram}
+\label{sec:plc}
+\input{Section_PLC_LLD}
 \pagebreak
 
 %----------------------------------------------------------------------------------------
-%   Section: Future Work
+%   Section: Realized Specifications
 %----------------------------------------------------------------------------------------
 \newpage
-\section{Future Work}
-\label{sec:future}
-\input{Section_Future_Work}
+\section{Realized Specifications}
+\label{sec:specs}
+\input{Section_Specifications}
+\pagebreak
+
+%----------------------------------------------------------------------------------------
+%   Section: NFPA standards
+%----------------------------------------------------------------------------------------
+\newpage
+\section{NFPA Standards}
+\label{sec:nfpa_standards}
+\input{Section_NFPA_Standards}
+\pagebreak
+
+%----------------------------------------------------------------------------------------
+%   Section: BOM
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Bill of Materials}
+\label{sec:bom}
+\input{Section_BOM}
 \pagebreak
 
 %----------------------------------------------------------------------------------------
 %    APPENDICES
 %----------------------------------------------------------------------------------------
-\newpage
-\appendix
-
-\section{Appendix: }
-\label{sec:App_}
-\input{Section_AppendixA}
-\pagebreak
+% \newpage
+% \appendix
+%
+% \section{Appendix: }
+% \label{sec:App_}
+% \input{Section_AppendixA}
+% \pagebreak
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
-\newpage
-\bibliographystyle{unsrt}%Used BibTeX style is unsrt
-\bibliography{bibfile}
-\addcontentsline{toc}{section}{References}
-
+% \newpage
+% \bibliographystyle{unsrt}%Used BibTeX style is unsrt
+% \bibliography{bibfile}
+% \addcontentsline{toc}{section}{References}
+%
 %\nocite{MQTT_Py}
-
-
-
 
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 %    Section: Authors, Lab, Disclaimer & Acknowledgements
 %----------------------------------------------------------------------------------------
-\newpage
-\input{Bios}
-\pagebreak
+% \newpage
+% \input{Bios}
+% \pagebreak
 %----------------------------------------------------------------------------------------
 
 \end{document}
