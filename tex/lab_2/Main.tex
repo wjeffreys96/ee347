@@ -6,6 +6,10 @@
 \usepackage{hyperref}
 \usepackage{float}
 \usepackage{indentfirst}
+\usepackage{booktabs, multirow} % for borders and merged ranges
+\usepackage{soul}% for underlines
+\usepackage{xcolor,colortbl} % for cell colors
+\usepackage{changepage,threeparttable} % for wide tables
 
 % Define PSU official colors
 % https://www.rri.pdx.edu/files/758/psu_identity_standardscolors.pdf
@@ -59,7 +63,7 @@
 
 \section{Introduction}
 The main focus of this lab was to practice the process of power factor (PF) correction. The point of PF correction is to add capacitors to an inductive load, or vice versa, to reduce reactive power transfer from the source to the load.
-This affects the magnitude of line current, which means it is an important technique in regards to efficiency, and reducing the wear and tear on power infrastructure.
+This affects the magnitude of line current, making it an important technique in regards to efficiency, and reducing the wear and tear on power infrastructure.
 
 \section{Data Analysis}
 \input{Section_DataAnalysis}
