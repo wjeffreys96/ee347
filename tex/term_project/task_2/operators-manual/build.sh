@@ -3,4 +3,4 @@ if [ ! -d "build" ]; then
   mkdir build
 fi
 
-pdflatex -jobname=report -output-directory=build Main
+pdflatex -interaction=nonstopmode -jobname=report -output-directory=build Main
