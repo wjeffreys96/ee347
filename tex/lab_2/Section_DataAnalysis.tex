@@ -1,71 +1,16 @@
+\paragraph{}The most noticeable thing on the table of measurements is likely how far
+the power factors are from the theoretical values. This is easy to see just from the
+first data point in table 1, which shows how a purely resistive load of 600$\Omega$
+has a measured power factor of 0.866 instead of 1.... Right? ...
+
+\paragraph{}... Okay, what is with that 30 degree difference in our power factor angles? ...
+
+\paragraph{}It is necessary to mention one row of bad data in table 1. When looking at
+the rows for inductive supply offset by the capacitive loads of -j240 and -j400 the
+power factor angles are identical. Which indicates that while we were switching between
+capacitive loads we switched incorrectly and recorded the -j240 offset twice.
+
 \input{meas_table.tex}
-
-\subsection{Methods of Calculation}
-\begin{itemize}
-	\item $\bar{Z}_\|$ - Resulting parallel impedance after adding the capacitive load
-	      \begin{center}
-		      $\bar{Z}_{\|} = \frac{
-				      \bar{Z}_{1}\bar{Z}_{2}
-			      }{
-				      \bar{Z}_1 + \bar{Z}_2
-			      }$
-	      \end{center}
-
-	\item $\bar{I}_L$ - Line current in the phase
-	      \begin{center}
-		      $\bar{I}_{L} = \frac{
-				      V_{\phi}
-			      }{
-				      \bar{Z_{\|}}
-			      }$
-	      \end{center}
-
-	\item $\bar{S}$ - Complex power in VA
-	      \begin{center}
-		      $\bar{S} = 3V_{\phi}I_{L}^*$
-	      \end{center}
-
-	\item $P$ - Real power in W
-	      \begin{center}
-		      $P = \Re(\bar{S})$
-	      \end{center}
-
-	\item $Q$ - Reactive power in var
-	      \begin{center}
-		      $Q = \Im(\bar{S})$
-	      \end{center}
-
-	\item $\theta$ - Power factor angle
-	      \begin{center}
-		      $\theta = \arg(\bar{S})$
-	      \end{center}
-
-	\item PF - Power factor
-	      \begin{center}
-		      PF = $\cos(\theta)$
-	      \end{center}
-
-	\item PF$_{c}$ - Power factor calculated from measured P, Q
-	      \begin{center}
-		      PF$_{c}  = \frac{
-				      P_{m}
-			      }{
-				      |P_{m} + jQ_{m}|
-			      }$
-	      \end{center}
-
-	\item $\theta_{m}$ - Power factor angle calculated from the measured power factor
-	      \begin{center}
-		      $\theta_{m} = \arccos($PF$_{m})$
-	      \end{center}
-
-	\item
-	      $\theta_{c}$ - Power factor angle derived from measured $P$ and $Q$
-	      \begin{center}
-		      $\theta_{c} = \arctan2(P, Q)$
-	      \end{center}
-
-\end{itemize}
 
 \input{calc_table.tex}
 
