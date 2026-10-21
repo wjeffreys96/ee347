@@ -1,20 +1,70 @@
 \input{meas_table.tex}
-\clearpage{}
+
 \subsection{Methods of Calculation}
 \begin{itemize}
-	\item Z$_\|$ The resulting parallel impedance, if any, after adding the capacitive load
+	\item $\bar{Z}_\|$ - Resulting parallel impedance after adding the capacitive load
 	      \begin{center}
-		      \item Z$_{\|} =$ $\frac{
-				      Z_{1}Z_{2}
+		      $\bar{Z}_{\|} = \frac{
+				      \bar{Z}_{1}\bar{Z}_{2}
 			      }{
-				      Z_1 + Z_2
+				      \bar{Z}_1 + \bar{Z}_2
 			      }$
 	      \end{center}
 
-	\item P - The real power in watts
+	\item $I_L$ - Line current in the phase
 	      \begin{center}
-		      P = $3VI^*$
+		      $\frac{
+				      V_{\phi}
+			      }{
+				      Z_{\|}
+			      }$
 	      \end{center}
+
+	\item $\bar{S}$ - Complex power in VA
+	      \begin{center}
+		      $\bar{S} = 3V_{\phi}I_{L}^*$
+	      \end{center}
+
+	\item $P$ - Real power in W
+	      \begin{center}
+		      $P = \Re(\bar{S})$
+	      \end{center}
+
+	\item $Q$ - Reactive power in var
+	      \begin{center}
+		      $Q = \Im(\bar{S})$
+	      \end{center}
+
+	\item $\theta$ - Power factor angle
+	      \begin{center}
+		      $\arg(\bar{S})$
+	      \end{center}
+
+	\item PF - Power factor
+	      \begin{center}
+		      $\cos(\theta)$
+	      \end{center}
+
+	\item PF$_{c}$ - Power factor calculated from measured P, Q
+	      \begin{center}
+		      $\frac{
+				      P_{m}
+			      }{
+				      |P_{m} + jQ_{m}|
+			      }$
+	      \end{center}
+
+	\item $\theta_{m}$ - Power factor angle calculated from the measured power factor
+	      \begin{center}
+		      $\arccos($PF$_{m})$
+	      \end{center}
+
+	\item
+	      $\theta_{c}$ - Power factor angle derived from PF$_{c}$
+	      \begin{center}
+		      $\arccos($PF$_{c})$
+	      \end{center}
+
 \end{itemize}
 
 \input{calc_table.tex}
