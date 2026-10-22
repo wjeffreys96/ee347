@@ -5,95 +5,126 @@ has a measured power factor of 0.866 instead of 1.... Right? ...
 
 \paragraph{}... Okay, what is with that 30 degree difference in our power factor angles? ...
 
-\paragraph{}It is necessary to mention one row of bad data in table 1. When looking at
+\paragraph{}It's necessary to mention one row of bad data in table 1. When looking at
 the rows for inductive supply offset by the capacitive loads of -j240 and -j400 the
 power factor angles are identical. Which indicates that while we were switching between
 capacitive loads we switched incorrectly and recorded the -j240 offset twice.
+
 
 \input{meas_table.tex}
 
 \input{calc_table.tex}
 
+\paragraph{}The figures bellow consist of two kinds of measurements. One being a phasor analysis
+showing our AC voltage and current in the complex domain in terms of phase angles. The other being
+an oscilloscope, which is showing the current and voltage in the familiar time domain. Both
+graphs show the phase angle between voltage and current, and when looking through them we can
+see how our different capacitive loads increase or decrease the angle between them.
+
+\paragraph{}If you look at figures 1 and 2, which show the voltage and current from the purely
+resistive load with a -j171$\Omega$ offset, we can observe a phase angle of around 74$^\circ$
+which closely aligns with what we see in table 1. The following two figures, 3 and 4,
+are from the same initial load. This time with an offset of -j600$\Omega$. From them we
+can see how the phase angle has decreased to about 45$^\circ$. Then if we move our
+attention all the way to tables 5 and 6 we can see the smallest phase angle since adding
+the various capacitive loads of only 26.6$^\circ$.
+
+\paragraph{}Aside from the changing phase angles the 6 graphs also show us how the amplitude
+of the current is changing with the different loads. Specifically it shows how it decreases
+with larger capacitive loads. This can be seen in more detail in table 1. Something surprising
+from this is how the amplitude of current initially increases after adding a -j170 parallel
+load. But then starts decreasing as more capacitance is added. This is the inverse of what
+happened to the power factor, which initially drops down to 0.20 followed by a steady incline
+as the capacitance increases.
+
+\paragraph{}The bottom 6 graphs show the same sequence of secondary capacitive loads this
+time for the initial inductive impedance of 300+j300$\Omega$. The pattern closely resembles
+the previous test case. Adding capacitive loads starts decreasing current and increasing the
+power factor as we offset some of the inductive load. At $X_C=600\Omega$ the parallel
+impedances cancel each other out and we reach a power factor of 1 again. When $X_C=1200\Omega$
+we get an overcorrection and the power factor angle moves towards -26$^\circ$.
+
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{figures/phasor-171.png}
 	\end{center}
-	\caption{}\label{fig1:}
+	\caption{$600 || -j171 \Omega$}\label{fig1:}
+
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{figures/oscope-171.png}
 	\end{center}
-	\caption{}\label{fig2:}
+	\caption{$600 || -j171 \Omega$}\label{fig2:}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{figures/phasor-600.png}
 	\end{center}
-	\caption{}\label{fig3:}
+	\caption{$600 || -j600 \Omega$}\label{fig3:}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{figures/oscope-600.png}
 	\end{center}
-	\caption{}\label{fig4:}
+	\caption{$600 || -j600 \Omega$}\label{fig4:}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{figures/phasor-1200.png}
 	\end{center}
-	\caption{}\label{fig5:}
+	\caption{$600 || -j1200 \Omega$}\label{fig5:}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{figures/oscope-1200.png}
 	\end{center}
-	\caption{}\label{fig6:}
+	\caption{$600 || -j1200 \Omega$}\label{fig6:}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{figures/phasor-l-171.png}
 	\end{center}
-	\caption{}\label{fig7:}
+	\caption{$600 || -j1200 \Omega$}\label{fig7:}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{figures/oscope-l-171.png}
 	\end{center}
-	\caption{}\label{fig8:}
+	\caption{$300-j300 || -j1200 \Omega$}\label{fig8:}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{figures/phasor-l-600.png}
 	\end{center}
-	\caption{}\label{fig9:}
+	\caption{$300-j300 || -j1200 \Omega$}\label{fig9:}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{figures/oscope-l-600.png}
 	\end{center}
-	\caption{}\label{fig10:}
+	\caption{$300-j600 || -j1200 \Omega$}\label{fig10:}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{figures/phasor-l-1200.png}
 	\end{center}
-	\caption{}\label{fig11:}
+	\caption{$300-j1200 || -j1200 \Omega$}\label{fig11:}
 \end{figure}
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.75\textwidth]{figures/oscope-l-1200.png}
 	\end{center}
-	\caption{}\label{fig12:}
+	\caption{$300-j1200 || -j1200 \Omega$}\label{fig12:}
 \end{figure}
