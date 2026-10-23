@@ -1,15 +1,37 @@
-\paragraph{}The most noticeable thing on the table of measurements is likely how far
-the power factors are from the theoretical values. This is easy to see just from the
-first data point in table 1, which shows how a purely resistive load of 600$\Omega$
-has a measured power factor of 0.866 instead of 1.... Right? ...
+\paragraph{}Something else worth mentioning is how the real power and voltage stayed relatively
+constant throughout both tests. The line voltage remained around 208 V, while the real power stayed
+between approximately 72 and 74 W. This makes sense because changing the capacitive load shouldn't
+have much of an effect on the real power being consumed by the original load. Instead, the capacitors
+affect the reactive power being supplied by the source. This helps explain why we saw changes in line
+current even though the real power stayed nearly the same. As the power factor gets closer to 1, the
+apparent power decreases, which also reduces the line current.
 
-\paragraph{}... Okay, what is with that 30 degree difference in our power factor angles? ...
+\paragraph{}Looking at the reactive power measurements helps us better understand what was happening
+with the power factor. For the purely resistive load, we started with almost no reactive power. However,
+after adding the -j171 Ω capacitor bank, the reactive power dropped to -253.1 VAR. This shows that the
+circuit was now supplying reactive power back toward the source. As we increased the magnitude of capacitive
+reactance, the reactive power started moving closer to zero. This is what we would expect because increasing
+capacitive reactance means we are actually decreasing capacitance, resulting in less reactive power being supplied.
 
-\paragraph{}It's necessary to mention one row of bad data in table 1. When looking at
-the rows for inductive supply offset by the capacitive loads of -j240 and -j400 the
-power factor angles are identical. Which indicates that while we were switching between
-capacitive loads we switched incorrectly and recorded the -j240 offset twice.
+\paragraph{}For the inductive load, we saw something different. Without any capacitors connected, the circuit
+was consuming 66.65 VAR. By adding capacitors in parallel, we were able to offset some of that inductive reactive
+power. At -j600 Ω, the reactive power had dropped to just -6.779 VAR, showing that the inductive and capacitive
+reactive powers were nearly canceling each other out. This was also where we saw the power factor reach almost
+1 and the line current drop to one of its lowest values.
 
+\paragraph{}Something interesting about the inductive circuit was how adding too much capacitance actually made
+the power factor worse. When we first connected the -j171 Ω capacitor bank, we ended up supplying more capacitive
+reactive power than was needed to offset the inductive load. This caused the line current to increase from 0.276 A
+to 0.621 A, while the calculated power factor dropped from 0.74 to 0.37. So instead of improving the power factor,
+we actually made it worse by overcorrecting the circuit.
+
+\paragraph{}As we increased the magnitude of capacitive reactance, the circuit started moving closer to the ideal
+correction point at -j600 Ω. Here, the line current had decreased to 0.224 A, which is about a 19\% reduction
+compared to the original inductive load without any capacitors. However, when we increased the capacitive
+reactance to -j1200 Ω, the circuit became inductive again because we were no longer supplying enough capacitive
+reactive power to fully offset the load. This shows why it's important to use the correct amount of capacitance
+when correcting power factor. Too much or too little can move the power factor away from 1, increasing the line
+current instead of reducing it.
 
 \input{meas_table.tex}
 
