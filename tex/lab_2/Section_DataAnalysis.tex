@@ -33,6 +33,22 @@ reactive power to fully offset the load. This shows why it's important to use th
 when correcting power factor. Too much or too little can move the power factor away from 1, increasing the line
 current instead of reducing it.
 
+\paragraph{}It's necessary to point out one row of bad data in table 1. When looking at
+the rows for inductive supply offset by the capacitive loads of -j240 and -j400 the
+power factor angles are identical. Which indicates that while we were switching between
+capacitive loads we switched incorrectly and recorded the -j240 offset twice. This doesn't effect
+the rest of our measurements however and the pattens we see still tell us a lot about the system.
+
+\paragraph{}Another discrepancy we need to discuss is our measured power factor and power factor angle.
+If you look at the puerly resistive load with no offset on the first row of table 1 you will see a
+phase angle of 30$^\circ$. This is clearly different than the expected 0 degrees. The reason for this is
+that while we were setting up the computer to take measurement we told it to take the $V_{L-L}$ instead
+of $V_\phi$. The reason this causes a particular offset of 30$^\circ$ arises because line voltage and phase
+voltage are related by $V_{L-L}=\sqrt{3}V_{\phi}\angle30^\circ$. Because of this unintended offset we
+also calculated proper values for our phase angle and power factor and included them in table 1. Table 2
+shows the ideal or theoretical values for each measurement and was used to compare our results with what
+was expected.
+
 \input{meas_table.tex}
 
 \input{calc_table.tex}
