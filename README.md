@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-For a Windows LateX environment, [TeXstudio](https://www.texstudio.org/#download) is a good option.
+For a LateX IDE, [TeXstudio](https://www.texstudio.org/#download) is a good option.
 
 ## OpenSUSE
 
@@ -34,62 +34,30 @@ mkdir build
 pdflatex -jobname=report -output-directory=build Main.tex
 ```
 
-### Build TeXpresso
+Then, install TeXstudio
 
-TeXpresso is a live viewer of LateX docs with good Neovim integrations. It must be built from source.
-
-#### Install dependencies
-
-There is no official OpenSUSE dependencies list, but we can look at the Fedora deps for a decent starting point.
-
-The dependencies I needed are as follows. You may need more.
-
-```bash
-sudo zypper in sdl2-compat-devel libSDL2-2_0-0 clang clang23 clang-tools glibc-devel-static jbig2dec-devel \
-libclang13 libclang-cpp23 libclang_rt23 libcmark-gfm0_29_0_gfm_13 libcmark-gfm-extensions0_29_0_gfm_13 \
-lld lld23 llvm23-gold libopenssl-devel freetype2-devel freetype2-devel-2.14.3-1.2.x86_64 libjbig2dec0 \
-openjpeg2-devel openjpeg2-devel-2.5.4-2.6.x86_64 mupdf mupdf-devel tesseract jbig2dec mujs leptonica-devel
-
-opi gumbo-parser # or build it yourself
+```sh
+opi texstudio
 ```
 
-#### Clone the repo
+## Collaboration
 
-```bash
-git clone git@github.com:let-def/texpresso.git
+TeXstudio enables real time collaborative editing. This is done through [teamtype](https://github.com/teamtype/teamtype) integration.
+
+The easiest method to install teamtype is to simply download a [release](https://github.com/teamtype/teamtype/releases). And place it somewhere in your PATH.
+
+Another good option if you have `cargo` installed,
+
+```sh
+cargo install --locked teamtype
 ```
 
-#### Build and Install
+### Sharing a Session
 
-Inside the cloned repo, do
+Inside TeXstudio, go to tools -> start sharing folder and follow the prompt on screen. Once the prompt disappears,
+at the bottom of the TeXstudio window is a status line. There is an icon that looks like two plugs joined. Hovering over it should reveal the access code, or right clicking it will copy the code to your clipboard.
 
-```bash
-make texpresso
-make texpresso-xetex
-```
+### Joining a Session
 
-Then copy output to somewhere in path, for example
-
-```bash
-cp build/texpresso ~/.local/bin/texpresso
-cp build/texpresso-xetex ~/.local/bin/texpresso-xetex
-```
-
-#### Set up Neovim Plugin
-
-##### Lazy.nvim
-
-```lua
-return {
-  "let-def/texpresso.vim",
-  config = function() require("texpresso").texpresso_path = "/home/will/.local/bin/texpresso" end,
-}
-```
-
-#### Usage
-
-in Neovim,
-
-```neovim
-:TeXpresso tex/templates/report/Main.tex
-```
+Inside TeXStudio, go to tools -> Connect to other user for collaboration. It will prompt you for the access code. Enter the code and hit ok.
+It will prompt you for where to place the collaboration folder. The default should be fine. You should now be connected to the other session. Updates will happen when you save.
