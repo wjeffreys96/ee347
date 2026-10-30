@@ -1,81 +1,92 @@
-\paragraph{}To demonstrate how power factor correction works we will set up two different circuits.
-The first will contain a purely resistive load of 600$\Omega$ and should therefore have a power factor of 1.
-And the second circuit will have a complex load with an inductive impedance of 300+j300$\Omega$.
-With each circuit we will connect a parallel capacitive impedance of 8 specific values, -[171, 200, 240, 300, 400, 600, 1200]$\Omega$.
-During the build of the circuit we had an easier time getting everything connected than we did  the previous lab. One main point of
-improvement came when switching between the two circuits. For this we learned how we could essentially shift all connection up by one,
+\paragraph{}To demonstrate how power factor correction works we will
+set up two different circuits.
+The first will contain a purely resistive load of 600$\Omega$ and
+should therefore have a power factor of 1.
+And the second circuit will have a complex load with an inductive
+impedance of 300+j300$\Omega$.
+With each circuit we will connect a parallel capacitive impedance of
+8 specific values, -[171, 200, 240, 300, 400, 600, 1200]$\Omega$.
+During the build of the circuit we had an easier time getting
+everything connected than we did  the previous lab. One main point of
+improvement came when switching between the two circuits. For this we
+learned how we could essentially shift all connection up by one,
 making the load changes easier.
 
-\paragraph{}With both circuits we measured the line voltage, phase voltage, line current, the real and reactive power,
-and the power factor. Samples were captured for all 8 capacitive loads. In addition, we calculated theoretical
-values for all the same loads. We also calculated these values by hand using the equations listed bellow in section 2.1.
+\paragraph{}With both circuits we measured the line voltage, phase
+voltage, line current, the real and reactive power,
+and the power factor. Samples were captured for all 8 capacitive
+loads. In addition, we calculated theoretical
+values for all the same loads. We also calculated these values by
+hand using the equations listed bellow in section 2.1.
 This allowed us to compare the measured values to expected values.
 
 \clearpage
 \subsection{Methods of Calculation}
 \begin{itemize}
-	\item $\bar{Z}_\|$ - Resulting parallel impedance after adding the capacitive load
-	      \begin{center}
-		      $\bar{Z}_{\|} = \frac{
-				      \bar{Z}_{1}\bar{Z}_{2}
-			      }{
-				      \bar{Z}_1 + \bar{Z}_2
-			      }$
-	      \end{center}
+  \item $\bar{Z}_\|$ - Resulting parallel impedance after adding the
+    capacitive load
+    \begin{center}
+      $\bar{Z}_{\|} = \frac{
+        \bar{Z}_{1}\bar{Z}_{2}
+      }{
+        \bar{Z}_1 + \bar{Z}_2
+      }$
+    \end{center}
 
-	\item $\bar{I}_L$ - Line current in the phase
-	      \begin{center}
-		      $\bar{I}_{L} = \frac{
-				      V_{\phi}
-			      }{
-				      \bar{Z_{\|}}
-			      }$
-	      \end{center}
+  \item $\bar{I}_L$ - Line current in the phase
+    \begin{center}
+      $\bar{I}_{L} = \frac{
+        V_{\phi}
+      }{
+        \bar{Z_{\|}}
+      }$
+    \end{center}
 
-	\item $\bar{S}$ - Complex power in VA
-	      \begin{center}
-		      $\bar{S} = 3V_{\phi}I_{L}^*$
-	      \end{center}
+  \item $\bar{S}$ - Complex power in VA
+    \begin{center}
+      $\bar{S} = 3V_{\phi}I_{L}^*$
+    \end{center}
 
-	\item $P$ - Real power in W
-	      \begin{center}
-		      $P = \Re(\bar{S})$
-	      \end{center}
+  \item $P$ - Real power in W
+    \begin{center}
+      $P = \Re(\bar{S})$
+    \end{center}
 
-	\item $Q$ - Reactive power in var
-	      \begin{center}
-		      $Q = \Im(\bar{S})$
-	      \end{center}
+  \item $Q$ - Reactive power in var
+    \begin{center}
+      $Q = \Im(\bar{S})$
+    \end{center}
 
-	\item $\theta$ - Power factor angle
-	      \begin{center}
-		      $\theta = \arg(\bar{S})$
-	      \end{center}
+  \item $\theta$ - Power factor angle
+    \begin{center}
+      $\theta = \arg(\bar{S})$
+    \end{center}
 
-	\item PF - Power factor
-	      \begin{center}
-		      PF = $\cos(\theta)$
-	      \end{center}
+  \item PF - Power factor
+    \begin{center}
+      PF = $\cos(\theta)$
+    \end{center}
 
-	\item PF$_{c}$ - Power factor calculated from measured P, Q
-	      \begin{center}
-		      PF$_{c}  = \frac{
-				      P_{m}
-			      }{
-				      |P_{m} + jQ_{m}|
-			      }$
-	      \end{center}
+  \item PF$_{c}$ - Power factor calculated from measured P, Q
+    \begin{center}
+      PF$_{c}  = \frac{
+        P_{m}
+      }{
+        |P_{m} + jQ_{m}|
+      }$
+    \end{center}
 
-	\item $\theta_{m}$ - Power factor angle calculated from the measured power factor
-	      \begin{center}
-		      $\theta_{m} = \arccos($PF$_{m})$
-	      \end{center}
+  \item $\theta_{m}$ - Power factor angle calculated from the
+    measured power factor
+    \begin{center}
+      $\theta_{m} = \arccos($PF$_{m})$
+    \end{center}
 
-	\item
-	      $\theta_{c}$ - Power factor angle derived from measured $P$ and $Q$
-	      \begin{center}
-		      $\theta_{c} = \arctan2(P, Q)$
-	      \end{center}
+  \item
+    $\theta_{c}$ - Power factor angle derived from measured $P$ and $Q$
+    \begin{center}
+      $\theta_{c} = \arctan2(P, Q)$
+    \end{center}
 
 \end{itemize}
 

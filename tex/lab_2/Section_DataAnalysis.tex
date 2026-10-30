@@ -1,168 +1,230 @@
-\paragraph{}Something else worth mentioning is how the real power and voltage stayed relatively
-constant throughout both tests. The line voltage remained around 208 V, while the real power stayed
-between approximately 72 and 74 W. This makes sense because changing the capacitive load shouldn't
-have much of an effect on the real power being consumed by the original load. Instead, the capacitors
-affect the reactive power being supplied by the source. This helps explain why we saw changes in line
-current even though the real power stayed nearly the same. As the power factor gets closer to 1, the
+\paragraph{}Something else worth mentioning is how the real power and
+voltage stayed relatively
+constant throughout both tests. The line voltage remained around 208
+V, while the real power stayed
+between approximately 72 and 74 W. This makes sense because changing
+the capacitive load shouldn't
+have much of an effect on the real power being consumed by the
+original load. Instead, the capacitors
+affect the reactive power being supplied by the source. This helps
+explain why we saw changes in line
+current even though the real power stayed nearly the same. As the
+power factor gets closer to 1, the
 apparent power decreases, which also reduces the line current.
 
-\paragraph{}Looking at the reactive power measurements helps us better understand what was happening
-with the power factor. For the purely resistive load, we started with almost no reactive power. However,
-after adding the -j171 Ω capacitor bank, the reactive power dropped to -253.1 VAR. This shows that the
-circuit was now supplying reactive power back toward the source. As we increased the magnitude of capacitive
-reactance, the reactive power started moving closer to zero. This is what we would expect because increasing
-capacitive reactance means we are actually decreasing capacitance, resulting in less reactive power being supplied.
+\paragraph{}Looking at the reactive power measurements helps us
+better understand what was happening
+with the power factor. For the purely resistive load, we started with
+almost no reactive power. However,
+after adding the -j171 Ω capacitor bank, the reactive power dropped
+to -253.1 VAR. This shows that the
+circuit was now supplying reactive power back toward the source. As
+we increased the magnitude of capacitive
+reactance, the reactive power started moving closer to zero. This is
+what we would expect because increasing
+capacitive reactance means we are actually decreasing capacitance,
+resulting in less reactive power being supplied.
 
-\paragraph{}For the inductive load, we saw something different. Without any capacitors connected, the circuit
-was consuming 66.65 VAR. By adding capacitors in parallel, we were able to offset some of that inductive reactive
-power. At -j600 Ω, the reactive power had dropped to just -6.779 VAR, showing that the inductive and capacitive
-reactive powers were nearly canceling each other out. This was also where we saw the power factor reach almost
+\paragraph{}For the inductive load, we saw something different.
+Without any capacitors connected, the circuit
+was consuming 66.65 VAR. By adding capacitors in parallel, we were
+able to offset some of that inductive reactive
+power. At -j600 Ω, the reactive power had dropped to just -6.779 VAR,
+showing that the inductive and capacitive
+reactive powers were nearly canceling each other out. This was also
+where we saw the power factor reach almost
 1 and the line current drop to one of its lowest values.
 
-\paragraph{}Something interesting about the inductive circuit was how adding too much capacitance actually made
-the power factor worse. When we first connected the -j171 Ω capacitor bank, we ended up supplying more capacitive
-reactive power than was needed to offset the inductive load. This caused the line current to increase from 0.276 A
-to 0.621 A, while the calculated power factor dropped from 0.74 to 0.37. So instead of improving the power factor,
+\paragraph{}Something interesting about the inductive circuit was how
+adding too much capacitance actually made
+the power factor worse. When we first connected the -j171 Ω capacitor
+bank, we ended up supplying more capacitive
+reactive power than was needed to offset the inductive load. This
+caused the line current to increase from 0.276 A
+to 0.621 A, while the calculated power factor dropped from 0.74 to
+0.37. So instead of improving the power factor,
 we actually made it worse by overcorrecting the circuit.
 
-\paragraph{}As we increased the magnitude of capacitive reactance, the circuit started moving closer to the ideal
-correction point at -j600 Ω where the parallel combination completely cancels out reactance. Here, the line current had decreased to 0.224 A, which is about a 19\% reduction
-compared to the original inductive load without any capacitors. However, when we increased the capacitive
-reactance to -j1200 Ω, the circuit became inductive again because we were no longer supplying enough capacitive
-reactive power to fully offset the load. This shows why it's important to use the correct amount of capacitance
-when correcting power factor. Too much or too little can move the power factor away from 1, increasing the line
+\paragraph{}As we increased the magnitude of capacitive reactance,
+the circuit started moving closer to the ideal
+correction point at -j600 Ω where the parallel combination completely
+cancels out reactance. Here, the line current had decreased to 0.224
+A, which is about a 19\% reduction
+compared to the original inductive load without any capacitors.
+However, when we increased the capacitive
+reactance to -j1200 Ω, the circuit became inductive again because we
+were no longer supplying enough capacitive
+reactive power to fully offset the load. This shows why it's
+important to use the correct amount of capacitance
+when correcting power factor. Too much or too little can move the
+power factor away from 1, increasing the line
 current instead of reducing it.
 
-\paragraph{}It's necessary to point out one row of bad data in table 1. When looking at
-the rows for inductive supply offset by the capacitive loads of -j240 and -j400 the
-power factor angles are identical. Which indicates that while we were switching between
-capacitive loads we switched incorrectly and recorded the -j240 offset twice. This doesn't effect
-the rest of our measurements however and the pattens we see still tell us a lot about the system.
+\paragraph{}It's necessary to point out one row of bad data in table
+1. When looking at
+the rows for inductive supply offset by the capacitive loads of -j240
+and -j400 the
+power factor angles are identical. Which indicates that while we were
+switching between
+capacitive loads we switched incorrectly and recorded the -j240
+offset twice. This doesn't effect
+the rest of our measurements however and the pattens we see still
+tell us a lot about the system.
 
-\paragraph{}Another discrepancy we need to discuss is our measured power factor and power factor angle.
-If you look at the puerly resistive load with no offset on the first row of table 1 you will see a
-phase angle of 30$^\circ$. This is clearly different than the expected 0 degrees. The reason for this is
-that while we were setting up the computer to take measurement we told it to use $V_{LL}$ as the reference voltage instead
-of $V_\phi$. The reason this causes a particular offset of 30$^\circ$ arises because line voltage and phase
-voltage are related by $V_{LL}=\sqrt{3}V_{\phi}\angle30^\circ$. Because of this unintended offset we
-also calculated proper values for our phase angle and power factor and included them in table 1. Table 2
-shows the ideal or theoretical values for each measurement and was used to compare our results with what
+\paragraph{}Another discrepancy we need to discuss is our measured
+power factor and power factor angle.
+If you look at the puerly resistive load with no offset on the first
+row of table 1 you will see a
+phase angle of 30$^\circ$. This is clearly different than the
+expected 0 degrees. The reason for this is
+that while we were setting up the computer to take measurement we
+told it to use $V_{LL}$ as the reference voltage instead
+of $V_\phi$. The reason this causes a particular offset of 30$^\circ$
+arises because line voltage and phase
+voltage are related by $V_{LL}=\sqrt{3}V_{\phi}\angle30^\circ$.
+Because of this unintended offset we
+also calculated proper values for our phase angle and power factor
+and included them in table 1. Table 2
+shows the ideal or theoretical values for each measurement and was
+used to compare our results with what
 was expected.
 
 \input{meas_table.tex}
 
 \input{calc_table.tex}
 
-\paragraph{}The figures below consist of two kinds of measurements. One being a phasor analysis
-showing our AC voltage and current in the complex domain in terms of phase angles. The other being
-an oscilloscope, which is showing the current and voltage in the familiar time domain. Both
-graphs show the phase angle between voltage and current, and when looking through them we can
-see how our different capacitive loads increase or decrease the angle between them.
+\paragraph{}The figures below consist of two kinds of measurements.
+One being a phasor analysis
+showing our AC voltage and current in the complex domain in terms of
+phase angles. The other being
+an oscilloscope, which is showing the current and voltage in the
+familiar time domain. Both
+graphs show the phase angle between voltage and current, and when
+looking through them we can
+see how our different capacitive loads increase or decrease the angle
+between them.
 
-\paragraph{}If you look at figures 1 and 2, which show the voltage and current from the purely
-resistive load with a -j171$\Omega$ offset, we can observe a phase angle of around 74$^\circ$
-which closely aligns with what we see in table 1. The following two figures, 3 and 4,
-are from the same initial load. This time with an offset of -j600$\Omega$. From them we
-can see how the phase angle has decreased to about 45$^\circ$. Then if we move our
-attention all the way to tables 5 and 6 we can see the smallest phase angle since adding
+\paragraph{}If you look at figures 1 and 2, which show the voltage
+and current from the purely
+resistive load with a -j171$\Omega$ offset, we can observe a phase
+angle of around 74$^\circ$
+which closely aligns with what we see in table 1. The following two
+figures, 3 and 4,
+are from the same initial load. This time with an offset of
+-j600$\Omega$. From them we
+can see how the phase angle has decreased to about 45$^\circ$. Then
+if we move our
+attention all the way to tables 5 and 6 we can see the smallest phase
+angle since adding
 the various capacitive loads of only 26.6$^\circ$.
 
-\paragraph{}Aside from the changing phase angles the 6 graphs also show us how the amplitude
-of the current is changing with the different loads. Specifically it shows how it decreases
-with larger capacitive loads. This can be seen in more detail in table 1. Something surprising
-from this is how the amplitude of current initially increases after adding a -j170 parallel
-load. But then starts decreasing as more capacitance is added. This is the inverse of what
-happened to the power factor, which initially drops down to 0.20 followed by a steady incline
+\paragraph{}Aside from the changing phase angles the 6 graphs also
+show us how the amplitude
+of the current is changing with the different loads. Specifically it
+shows how it decreases
+with larger capacitive loads. This can be seen in more detail in
+table 1. Something surprising
+from this is how the amplitude of current initially increases after
+adding a -j170 parallel
+load. But then starts decreasing as more capacitance is added. This
+is the inverse of what
+happened to the power factor, which initially drops down to 0.20
+followed by a steady incline
 as the capacitance increases.
 
-\paragraph{}The bottom 6 graphs show the same sequence of secondary capacitive loads this
-time for the initial inductive impedance of 300+j300$\Omega$. The pattern closely resembles
-the previous test case. Adding capacitive loads starts decreasing current and increasing the
-power factor as we offset some of the inductive load. At $X_C=600\Omega$ the parallel
-impedances cancel each other out and we reach a power factor of 1 again. When $X_C=1200\Omega$
+\paragraph{}The bottom 6 graphs show the same sequence of secondary
+capacitive loads this
+time for the initial inductive impedance of 300+j300$\Omega$. The
+pattern closely resembles
+the previous test case. Adding capacitive loads starts decreasing
+current and increasing the
+power factor as we offset some of the inductive load. At
+$X_C=600\Omega$ the parallel
+impedances cancel each other out and we reach a power factor of 1
+again. When $X_C=1200\Omega$
 we get an overcorrection and the power factor angle moves towards -26$^\circ$.
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/phasor-171.png}
-	\end{center}
-	\caption{$600$ $ || -j171 \Omega$}\label{fig1:}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/phasor-171.png}
+  \end{center}
+  \caption{$600$ $ || -j171 \Omega$}\label{fig1:}
 
 \end{figure}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/oscope-171.png}
-	\end{center}
-	\caption{$600$ $ || -j171 \Omega$}\label{fig2:}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/oscope-171.png}
+  \end{center}
+  \caption{$600$ $ || -j171 \Omega$}\label{fig2:}
 \end{figure}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/phasor-600.png}
-	\end{center}
-	\caption{$600$ $ || -j600 \Omega$}\label{fig3:}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/phasor-600.png}
+  \end{center}
+  \caption{$600$ $ || -j600 \Omega$}\label{fig3:}
 \end{figure}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/oscope-600.png}
-	\end{center}
-	\caption{$600 $ $ || -j600 \Omega$}\label{fig4:}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/oscope-600.png}
+  \end{center}
+  \caption{$600 $ $ || -j600 \Omega$}\label{fig4:}
 \end{figure}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/phasor-1200.png}
-	\end{center}
-	\caption{$600 $ $ || -j1200 \Omega$}\label{fig5:}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/phasor-1200.png}
+  \end{center}
+  \caption{$600 $ $ || -j1200 \Omega$}\label{fig5:}
 \end{figure}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/oscope-1200.png}
-	\end{center}
-	\caption{$600 $ $ || -j1200 \Omega$}\label{fig6:}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/oscope-1200.png}
+  \end{center}
+  \caption{$600 $ $ || -j1200 \Omega$}\label{fig6:}
 \end{figure}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/phasor-l-171.png}
-	\end{center}
-	\caption{$300 - j300 $ $ || -j1200 \Omega$}\label{fig7:}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/phasor-l-171.png}
+  \end{center}
+  \caption{$300 - j300 $ $ || -j1200 \Omega$}\label{fig7:}
 \end{figure}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/oscope-l-171.png}
-	\end{center}
-	\caption{$300-j300 $ $ || -j1200 \Omega$}\label{fig8:}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/oscope-l-171.png}
+  \end{center}
+  \caption{$300-j300 $ $ || -j1200 \Omega$}\label{fig8:}
 \end{figure}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/phasor-l-600.png}
-	\end{center}
-	\caption{$300-j300 $ $ || -j1200 \Omega$}\label{fig9:}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/phasor-l-600.png}
+  \end{center}
+  \caption{$300-j300 $ $ || -j1200 \Omega$}\label{fig9:}
 \end{figure}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/oscope-l-600.png}
-	\end{center}
-	\caption{$300-j600 $ $ || -j1200 \Omega$}\label{fig10:}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/oscope-l-600.png}
+  \end{center}
+  \caption{$300-j600 $ $ || -j1200 \Omega$}\label{fig10:}
 \end{figure}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/phasor-l-1200.png}
-	\end{center}
-	\caption{$300-j1200 $ $ || -j1200 \Omega$}\label{fig11:}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/phasor-l-1200.png}
+  \end{center}
+  \caption{$300-j1200 $ $ || -j1200 \Omega$}\label{fig11:}
 \end{figure}
 
 \begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=0.5\textwidth]{figures/oscope-l-1200.png}
-	\end{center}
-	\caption{$300-j1200 $ $ || -j1200 \Omega$}\label{fig12:}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figures/oscope-l-1200.png}
+  \end{center}
+  \caption{$300-j1200 $ $ || -j1200 \Omega$}\label{fig12:}
 \end{figure}

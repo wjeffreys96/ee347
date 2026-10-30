@@ -1,11 +1,11 @@
-\documentclass[hidelinks, letterpaper,11pt, includefoot, headheight=10mm]{texMemo}
+\documentclass[hidelinks, letterpaper,11pt, includefoot,
+headheight=10mm]{texMemo}
 
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{color}
 \usepackage{hyperref}
 \usepackage{lipsum}
-
 
 %----------------------------------------------------------------------------------------
 %     Define PSU official colors
@@ -24,7 +24,6 @@
 \definecolor{PSUyellow}{RGB}{230,220,143}
 \definecolor{PSUtan}{RGB}{232,221,162}
 \definecolor{PSUpurple}{RGB}{101,3,96}
-
 
 %----------------------------------------------------------------------------------------
 %    Watermark
@@ -52,7 +51,9 @@
 %----------------------------------------------------------------------------------------
 \pagestyle{fancy}
 
-\fancyhead[L]{\footnotesize\textcolor{PSUgray}{Department of Electrical \& Computer Engineering \\1900 SW 4th Ave, suite 160 \\ Portland, OR 97201}}
+\fancyhead[L]{\footnotesize\textcolor{PSUgray}{Department of
+    Electrical \& Computer Engineering \\1900 SW 4th Ave, suite 160
+\\ Portland, OR 97201}}
 %\fancyhead[C]{center head}
 \fancyhead[R]{\includegraphics[width=3in]{psulogo_horiz.png}}
 %\lfoot{\includegraphics[test}
@@ -67,7 +68,9 @@
 \footrule{\hrule}{\color{PSUgreen}\hrule}{}{}
 \renewcommand{\footrulewidth}{0.4pt}
 \fancyfoot[L]{\footnotesize\color{PSUgray}\sffamily
-\href{https://www.pdx.edu/electrical-computer-engineering/power-engineering-focus}{Power Engineering Laboratory} \textbullet\ Fourth Avenue Building, 1900 SW 4$^{th}$ Ave, suite 25-00, Portland, OR 97201}
+  \href{https://www.pdx.edu/electrical-computer-engineering/power-engineering-focus}{Power
+  Engineering Laboratory} \textbullet\ Fourth Avenue Building, 1900 SW
+4$^{th}$ Ave, suite 25-00, Portland, OR 97201}
 %\fancyfoot[C]{~}
 \fancyfoot[R]{\footnotesize~\newline\color{PSUgray}\sffamily\thepage}
 
