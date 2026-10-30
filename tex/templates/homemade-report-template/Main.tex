@@ -1,0 +1,82 @@
+\documentclass[hidelinks, letterpaper,11pt,headheight=10mm]{texMemo}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{booktabs, multirow} % for borders and merged ranges
+\usepackage{soul}% for underlines
+\usepackage{xcolor,colortbl} % for cell colors
+\usepackage{changepage,threeparttable} % for wide tables
+\usepackage{siunitx}
+
+% Define PSU official colors
+% https://www.rri.pdx.edu/files/758/psu_identity_standardscolors.pdf
+\definecolor{PSUgreen}{RGB}{106,127,16}
+\definecolor{PSUltgreen}{RGB}{168,180,0}
+\definecolor{PSUblue}{RGB}{0,117,154}
+\definecolor{PSUltblue}{RGB}{161,216,224}
+\definecolor{PSUgray}{RGB}{71,67,52}
+\definecolor{PSUBrown}{RGB}{96,53,29}
+\definecolor{PSUsienna}{RGB}{163,63,31}
+\definecolor{PSUred}{RGB}{210,73,42}
+\definecolor{PSUorange}{RGB}{220,155,50}
+\definecolor{PSUyellow}{RGB}{230,220,143}
+\definecolor{PSUtan}{RGB}{232,221,162}
+\definecolor{PSUpurple}{RGB}{101,3,96}
+
+%----------------------------------------------------------------------------------------
+%    To:/From:
+%----------------------------------------------------------------------------------------
+
+\memoto{Jeff Dinsmore, Bob Bass}
+\memofrom{William Jeffreys, Greyland Miller, Rodney Downer}
+\memosubject{Lab 3 Report Submission}
+\memodate{2026-10-16}
+\geometry{headheight=60pt, headsep=15pt, includehead}
+\setlength{\parindent}{2em} % Increases the first-line indent to 2em
+% (or use 2cm, 20pt, etc.)
+
+\begin{document}
+\pagenumbering{arabic}
+
+%----------------------------------------------------------------------------------------
+%    Header
+%----------------------------------------------------------------------------------------
+\pagestyle{fancy}
+
+\fancyhead[L]{\footnotesize\textcolor{PSUgray}{Department of
+    Electrical \& Computer Engineering \\1900 SW 4th Ave, suite 160
+\\ Portland, OR 97201}}
+\fancyhead[R]{\includegraphics[width=3in]{psulogo_horiz.png}}
+\headrule{\hrule}{\color{PSUgreen}\hrule}{}{}
+\renewcommand{\headrulewidth}{0.4pt}
+
+%----------------------------------------------------------------------------------------
+%    Footer
+%----------------------------------------------------------------------------------------
+\footrule{\hrule}{\color{PSUgreen}\hrule}{}{}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[L]{\footnotesize\color{PSUgray}\sffamily
+  \href{https://www.pdx.edu/electrical-computer-engineering/power-engineering-focus}{Power
+  Engineering Laboratory} \textbullet\ Fourth Avenue Building, 1900 SW
+4$^{th}$ Ave, suite 25-00, Portland, OR 97201}%\fancyfoot[C]{~}
+\fancyfoot[R]{\footnotesize~\newline\color{PSUgray}\sffamily\thepage}
+
+\maketitle
+
+\section{Introduction}
+\input{Section_Introduction}
+
+\section{Methods}
+\input{Section_Methods}
+
+\section{Analysis}
+\input{Section_Analysis}
+
+\section{Conclusion}
+\input{Section_Conclusion}
+
+\end{document}
