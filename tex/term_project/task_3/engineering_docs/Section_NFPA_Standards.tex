@@ -1,0 +1,23 @@
+\paragraph{} For all NFPA 70 requirements the 2014 draft version was used.
+
+\begin{itemize}
+	\item Lockout/Tagout Procedure - Annex G {\newline} {\indent}
+	      We followed the sequence of the lockout/tagout procedure as relevant.
+	\item Conductor sizing - 240.4(D)(1) - 310.15 {\newline} {\indent}
+	      18 gauge wire was used in the panel according with table 310.15(B)(16).
+	      This decision was based on an  expected expected maximum current draw of 0.982A for this control system.
+	      And is well under the maximum 7A that 18 gauge wire is allowed.
+	      % 0.9(power supply)+16m(PLC)+16m(inputs)+10m(outputs)+40m(both lights)=982mA	
+	\item Ampacity factor - 210.19(A)(1) - 210.20(A) {\newline} {\indent}
+	      Because this system will be operated as a continuous load the ampacity of the conductors used is not less
+	      than the noncontinuous load plus 125 percent of the continuous load. Making the minimum allowable ampacity
+	      1.22A, well within the 7A range.
+	      % 0.9(power supply)+16m(PLC)+16m(inputs)+10m(outputs)+40m(both lights)=982mA	
+	\item Fuse sizing - 240.6 {\newline} {\indent}
+	      Based on the max expected current draw of 0.982A and the NFPA paragraph listed we selected 1A fuses.
+	\item Equipment grounding - 250.119 {\newline} {\indent}
+	      All grounding wires are green in compliance with the paragraph listed.
+	\item Conductor location use - 310.10(A) {\newline} {\indent}
+	      All wires selected for this system are of type THHN. This wire is acceptable for the dry conditions in which
+	      our panel will operate.
+\end{itemize}
