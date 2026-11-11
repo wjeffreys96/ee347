@@ -2,7 +2,7 @@ import math
 from dataclasses import dataclass
 from typing import override
 
-TOLERANCE = 0.95
+TOLERANCE = 1
 XFMR_S_RATING_VA = 250
 NUM_XFMR = 3
 PHASE_VOLT_V = 120
@@ -27,40 +27,45 @@ C_LOADS_OHM = [None, -171.4j, -200j, -240j, -300j, -400j, -600j, -1200j]
 
 
 def main() -> None:
-    motor_loads = [MotorSample(*data) for data in MOTOR_DATA]
+    motor_loads: list[MotorSample | None] = [MotorSample(*data) for data in MOTOR_DATA]
+    motor_loads.append(None)
     overload_conditions: list[OverloadCondition] = []
+    calc_counter = 0
 
     for r in R_LOADS_OHM:
         for c in C_LOADS_OHM:
             for m in motor_loads:
-                ri = wye_i_from_z(r)
-                ci = delta_i_from_z(c)
-                rs = s_from_i(ri)
-                cs = s_from_i(ci)
-                ms = m.s
+                ri = wye_i_ll_from_z(r)
+                ci = delta_i_ll_from_z(c)
+                rs = s_from_i_ll(ri)
+                cs = s_from_i_ll(ci)
+                ms = m.s if m is not None else 0
                 s_total = rs + cs + ms
                 if abs(s_total) > OVERLOAD_LIMIT:
                     overload_conditions.append(
-                        OverloadCondition(abs(s_total), r, c, m.s)
+                        OverloadCondition(abs(s_total), r, c, ms)
                     )
+                calc_counter += 1
 
     for cond in overload_conditions:
         print(cond)
 
-    print(f"Total found: {len(overload_conditions)}")
+    print(
+        f"Total found: {len(overload_conditions)}. Total Calculations: {calc_counter}"
+    )
 
 
-def delta_i_from_z(z: complex | None) -> complex:
-    """Return the current in a delta connected load given an impedance"""
+def delta_i_ll_from_z(z: complex | None) -> complex:
+    """Return the line current in a delta connected load given an impedance"""
     return math.sqrt(3) * LL_VOLT_V / z if z is not None else 0
 
 
-def wye_i_from_z(z: complex | None) -> complex:
-    """Return the current in a wye connected load given an impedance"""
+def wye_i_ll_from_z(z: complex | None) -> complex:
+    """Return the line current in a wye connected load given an impedance"""
     return PHASE_VOLT_V / z if z is not None else 0
 
 
-def s_from_i(i_ll: complex) -> complex:
+def s_from_i_ll(i_ll: complex) -> complex:
     """Calculate the total complex power in a load given the line current"""
     return math.sqrt(3) * LL_VOLT_V * i_ll.conjugate() if i_ll != 0 else 0
 
