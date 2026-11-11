@@ -1,6 +1,6 @@
+import csv
 import math
 from dataclasses import dataclass
-from typing import override
 
 TOLERANCE = 1
 XFMR_S_RATING_VA = 250
@@ -43,16 +43,35 @@ def main() -> None:
                 s_total = rs + cs + ms
                 if abs(s_total) > OVERLOAD_LIMIT:
                     overload_conditions.append(
-                        OverloadCondition(abs(s_total), r, c, ms)
+                        OverloadCondition(
+                            abs(s_total), r, c, ms, m.nm if m is not None else None
+                        )
                     )
                 calc_counter += 1
 
+    csvname = "overloads.csv"
+    with open(csvname, "w", newline="") as csvfile:
+        writer = csv.writer(csvfile, delimiter=",")
+        writer.writerow(
+            [
+                "Total S (VA)",
+                "Resistive Bank Value (ohms)",
+                "Capacitive Bank Value (ohms)",
+                "Motor S Value (VA)",
+                "Motor Torque (Nm)",
+            ]
+        )
+        for cond in overload_conditions:
+            writer.writerow(cond.to_csv_row())
+
     for cond in overload_conditions:
-        print(cond)
+        print(cond.to_fmt_str())
 
     print(
-        f"Total found: {len(overload_conditions)}. Total Calculations: {calc_counter}"
+        f"{'-' * 50}\nTotal found: {len(overload_conditions)}. Total Calculations: {calc_counter}"
     )
+
+    print(f"Created CSV: '{csvname}'")
 
 
 def delta_i_ll_from_z(z: complex | None) -> complex:
@@ -90,11 +109,14 @@ class OverloadCondition:
     s_total: float
     r: float | None
     c: complex | None
-    ms: complex
+    m_s: complex | None
+    m_nm: float | None
 
-    @override
-    def __repr__(self) -> str:
-        return f"s: {round(self.s_total, 2)}, r: {self.r} c: {self.c}, ms: {self.ms}"
+    def to_fmt_str(self) -> str:
+        return f"s: {round(self.s_total, 2)}, r: {self.r} c: {self.c}, ms: {self.m_s}, m_torque: {self.m_nm}"
+
+    def to_csv_row(self) -> list[float | complex | None]:
+        return [round(self.s_total, 2), self.r, self.c, self.m_s, self.m_nm]
 
 
 if __name__ == "__main__":
