@@ -1,0 +1,18 @@
+\begin{table}[!htp]\centering\small
+	\caption{CLICK Output Module}\label{tab:click_output_module}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{lcccccccccll}
+			\toprule
+			                             &                         & \multicolumn{7}{c}{\textbf{POINT TYPE}}     &                                            &             &                                                                                                                                          \\ \cmidrule(lr){3-9}
+			                             &                         & \multicolumn{6}{c}{\textbf{Hardware Point}} & \multicolumn{1}{c}{\textbf{Virtual Point}} &             &             &                                                                                                                            \\ \cmidrule(lr){3-8}\cmidrule(lr){9-9}
+			\textbf{Point Description}   & \textbf{Origin Address} & \textbf{DO}                                 & \textbf{DI}                                & \textbf{AO} & \textbf{AI} & \textbf{Pwr} & \textbf{Mech Pt} &       & \textbf{Destination Address} & \textbf{Destination Description} & \textbf{Notes} \\ \midrule
+			\textbf{CLICK Output Module} &                         &                                             &                                            &             &             &              &                  &       &                              &                                  &                \\ \midrule
+			Output common 1              & C1                      & 0                                           & 1                                          & 0           & 0           & 0            & 0                & power & power                        &                                                   \\
+			Output 1                     & 1                       & 1                                           & 0                                          & 0           & 0           & 0            & 0                & A1    & Transformer switchgear       &                                                   \\
+			Output 2                     & 2                       & 1                                           & 0                                          & 0           & 0           & 0            & 0                & A2    & Bus switchgear               &                                                   \\
+			Output 3                     & 3                       & 1                                           & 0                                          & 0           & 0           & 0            & 0                & A3    & Feeder 1 switchgear          &                                                   \\
+			Output 4                     & 4                       & 1                                           & 0                                          & 0           & 0           & 0            & 0                & A4    & Feeder 2 switchgear          &                                                   \\ \midrule
+			\textbf{Total Points:}       &                         & 4                                           & 1                                          &             &             &              &                  &       &                              &                                  &                \\ \bottomrule
+		\end{tabular}
+	}
+\end{table}

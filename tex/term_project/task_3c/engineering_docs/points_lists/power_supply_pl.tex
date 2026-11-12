@@ -1,0 +1,23 @@
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{Pictures/LabVolt_Power_Supply}
+  \caption{Power Supply}
+\end{figure}
+\begin{table}[!htp]\centering
+  \caption{LabVolt Power Supply, 8821}\label{tab:power_supply}
+  \setlength{\tabcolsep}{16pt}
+  \resizebox{\textwidth}{!}{
+    \begin{tabular}{lccccccccc@{\hspace{16pt}}l@{\hspace{16pt}}l}
+      \toprule
+      & & \multicolumn{7}{c}{\textbf{POINT TYPE}} & & & \\ \cmidrule(lr){3-9}
+      & & \multicolumn{6}{c}{\textbf{Hardware Point}} & \multicolumn{1}{c}{\textbf{Virtual Point}} & & & \\ \cmidrule(lr){3-8}\cmidrule(lr){9-9}
+      \textbf{Point Description} & \textbf{Origin Address} & \textbf{DO} & \textbf{DI} & \textbf{AO} & \textbf{AI} & \textbf{Pwr} & \textbf{Mech Pt} & & \textbf{Destination Address} & \textbf{Destination Description} & \textbf{Notes} \\ \midrule
+      \textbf{LabVolt Power Supply, 8821} & & & & & & & & & & & \\ \midrule
+      AC fixed 120/208 V Phase A & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & Rack, PCC, Red & \\
+      AC fixed 120/208 V Phase B & 2 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 2 & Rack, PCC, Black & \\
+      AC fixed 120/208 V Phase C & 3 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 3 & Rack, PCC, Blue & \\
+      AC fixed 120/208 V Neutral & N & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 4 & PCC, Neutral & \\
+      24VAC, 0.4A Power Input & Power Input & 0 & 0 & 0 & 0 & 1 & 0 & 0 &  & 24VAC, 0.4A Power supply, DAC 9063 & 24 VAC power supply \\ \bottomrule
+    \end{tabular}
+  }
+\end{table}

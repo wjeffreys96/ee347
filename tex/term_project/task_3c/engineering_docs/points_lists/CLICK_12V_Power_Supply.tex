@@ -1,0 +1,19 @@
+\begin{table}[!htp]\centering\small
+	\caption{CLICK 12V Power Supply}\label{tab:click_12v_power_supply}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{lcccccccccll}
+			\toprule
+			                                &                         & \multicolumn{7}{c}{\textbf{POINT TYPE}}     &                                            &             &                                                                                                                                                  \\ \cmidrule(lr){3-9}
+			                                &                         & \multicolumn{6}{c}{\textbf{Hardware Point}} & \multicolumn{1}{c}{\textbf{Virtual Point}} &             &             &                                                                                                                                    \\ \cmidrule(lr){3-8}\cmidrule(lr){9-9}
+			\textbf{Point Description}      & \textbf{Origin Address} & \textbf{DO}                                 & \textbf{DI}                                & \textbf{AO} & \textbf{AI} & \textbf{Pwr} & \textbf{Mech Pt} &         & \textbf{Destination Address} & \textbf{Destination Description}     & \textbf{Notes}   \\ \midrule
+			\textbf{CLICK 12V Power Supply} &                         &                                             &                                            &             &             &              &                  &         &                              &                                      &                  \\ \midrule
+			24VDC power supply output       & 1                       & 0                                           & 0                                          & 0           & 0           & 1            & 0                & 1       &                              & CLICK PLC 4-pin input connector      & First/front pin  \\
+			0V                              & 2                       & 0                                           & 0                                          & 0           & 0           & 1            & 0                & 2       &                              & CLICK PLC 4-pin input connector      & Second pin       \\
+			Ground                          & 3                       & 0                                           & 0                                          & 0           & 0           & 1            & 0                & 4       &                              & CLICK PLC 4-pin input connector      & Fourth/rear pin  \\
+			Ground                          & 3                       & 0                                           & 0                                          & 0           & 0           & 1            & 0                & ground  &                              & Ground connection to common          &                  \\
+			L                               & 4                       & 0                                           & 0                                          & 0           & 0           & 1            & 0                & power   &                              & power                                & Fused protection \\
+			Neutral connection              & 5                       & 0                                           & 0                                          & 0           & 0           & 1            & 0                & Neutral &                              & Neutral connection to common neutral &                  \\ \midrule
+			\textbf{Total Points:}          &                         &                                             &                                            &             &             & 6            &                  &         &                              &                                      &                  \\ \bottomrule
+		\end{tabular}
+	}
+\end{table}
