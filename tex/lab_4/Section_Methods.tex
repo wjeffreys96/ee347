@@ -1,32 +1,80 @@
+
 \subsection{Calculations}
 \begin{description}
-	\item[$S_{3P}$] - Total 3 Phase Apparent Power Rating
-	\begin{center}
-		$S_{3p} = 3S_{\phi}$
-	\end{center}
-	\item[$V_{Bank}$] - Line Voltage of the Transformer Bank
-	\begin{center}
-	Wye/Delta: $V_{Bank} = V_{Rated}$
-	\end{center}
 
-	\item[$I_{Bank}$] - Line Current of the Transformer Bank
-	\begin{center}
-	Wye/Delta: $I_{Bank} = I_{Rated}$
-	\end{center}
+    \item[$S_{3P}$] - Total 3 Phase Apparent Power Rating
+    \begin{center}
+        \begin{align*}
+            S_{3P} &= 3S_{\phi} \\
+                   &= 3(250) \\
+                   &= 750 \ VA
+        \end{align*}
+    \end{center}
 
-	\item[$V_{Phase}$] - Voltage in Each Phase of the Transformer Bank
-	\begin{center}
-	Wye: $V_{Phase} = \frac{V_{Bank}}{\sqrt{3}}$
-	\end{center}
-	\begin{center}
-	Delta: $V_{Phase} = V_{Bank}$
-	\end{center}
+    \item[$V_{Bank}$] - Line Voltage of the Transformer Bank
+    \begin{center}
+        Primary (All Configurations):
+        \begin{align*}
+            V_{Bank,P} &= 208 \ V
+        \end{align*}
+        Secondary:
+        \begin{align*}
+            \text{Wye: } V_{Bank,S} &= \sqrt{3}(120) = 207.85 \ V \\
+            \text{Delta: } V_{Bank,S} &= 120 \ V
+        \end{align*}
+    \end{center}
 
-	\item[$I_{Phase}$] - Current in Each Phase of the Transformer Bank
-	\begin{center}
-	Wye: $I_{Phase} = I_{Bank}$
-	\end{center}
-	\begin{center}
-	Delta: $I_{Phase} = \frac{I_{Bank}}{\sqrt{3}}$
-	\end{center}
+    \item[$I_{Bank}$] - Line Current of the Transformer Bank
+    \begin{center}
+        Primary (Delta):
+        \begin{align*}
+            I_{Bank,P} &= \sqrt{3}\left(\frac{250}{208}\right) \\
+                       &= 2.082 \ A
+        \end{align*}
+        Primary (Wye):
+        \begin{align*}
+            I_{Bank,P} &= \frac{250}{120.09} \\
+                       &= 2.082 \ A
+        \end{align*}
+        Secondary (Wye):
+        \begin{align*}
+            I_{Bank,S} &= \frac{250}{120} \\
+                       &= 2.083 \ A
+        \end{align*}
+        Secondary (Delta):
+        \begin{align*}
+            I_{Bank,S} &= \sqrt{3}\left(\frac{250}{120}\right) \\
+                       &= 3.608 \ A
+        \end{align*}
+    \end{center}
+
+    \item[$V_{Phase}$] - Voltage in Each Phase of the Transformer Bank
+    \begin{center}
+        Primary:
+        \begin{align*}
+            \text{Wye: } V_{Phase,P} &= \frac{208}{\sqrt{3}} = 120.09 \ V \\
+            \text{Delta: } V_{Phase,P} &= 208 \ V
+        \end{align*}
+        Secondary:
+        \begin{align*}
+            \text{Wye: } V_{Phase,S} &= \frac{207.85}{\sqrt{3}} = 120 \ V \\
+            \text{Delta: } V_{Phase,S} &= 120 \ V
+        \end{align*}
+    \end{center}
+
+    \item[$I_{Phase}$] - Current in Each Phase of the Transformer Bank
+    \begin{center}
+        Primary:
+        \begin{align*}
+            \text{Wye: } I_{Phase,P} &= 1.202 \ A \\
+            \text{Delta: } I_{Phase,P} &= \frac{2.082}{\sqrt{3}} = 1.202 \ A
+        \end{align*}
+        Secondary:
+        \begin{align*}
+            \text{Wye: } I_{Phase,S} &= 2.083 \ A \\
+            \text{Delta: } I_{Phase,S} &= \frac{3.608}{\sqrt{3}} = 2.083 \ A
+        \end{align*}
+    \end{center}
+
 \end{description}
+

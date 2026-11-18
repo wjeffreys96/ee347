@@ -1,0 +1,6 @@
+\paragraph{}The purpose of this lab is to develop a familiarization for transformer usage in two common situations.
+First we will create a three phase transformer bank in a delta-wye configuration and look at how the bank and
+phase voltage, current and power compare with calculated values. This type of transformer bank is common on 
+industrial sites using heavy equipment and large three phase motors. The second type of transformer bank is 
+for residential use cases and uses only two phases.     
+
