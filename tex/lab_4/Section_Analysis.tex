@@ -14,15 +14,15 @@ a half in some places. This is probably be explanable. But I'm sleepy.
 		\toprule
 		\textbf{LabVolt Label} & \textbf{Symbol} & \textbf{Unit} & \textbf{Measured} & \textbf{Calculated} & \textbf{Error (\%)} \\
 		\midrule
-		V Bank Primary         & $V_{Bank,P}$    & V             & 207.3             & 208.0               & $-0.34$             \\
-		V Phase Primary        & $V_{Phase,P}$   & V             & 207.1             & 208.0               & $-0.43$             \\
-		V Bank Secondary       & $V_{Bank,S}$    & V             & 200.3             & 207.85              & $-3.63$             \\
-		V Phase Secondary      & $V_{Phase,S}$   & V             & 116.0             & 120.0               & $-3.33$             \\
-		I Bank Primary         & $I_{Bank,P}$    & A             & 1.013             & 2.082               & $-51.3$             \\
-		I Phase Primary        & $I_{Phase,P}$   & A             & 0.585             & 1.202               & $-51.3$             \\
-		I Bank Secondary       & $I_{Bank,S}$    & A             & 0.973             & 2.083               & $-53.3$             \\
-		I Phase Secondary      & $I_{Phase,S}$   & A             & 0.974             & 2.083               & $-53.2$             \\
-		PQS1 (E1, I1) 3$\sim$  & $S_{3P}$        & VA            & 363.8             & 750                 & $-51.5$             \\
+		V Bank Primary         & $V_{Bank,P}$    & V             & 207.3             & 208.0               & $0.34$              \\
+		V Phase Primary        & $V_{Phase,P}$   & V             & 207.1             & 208.0               & $0.43$              \\
+		V Bank Secondary       & $V_{Bank,S}$    & V             & 200.3             & 207.85              & $3.63$              \\
+		V Phase Secondary      & $V_{Phase,S}$   & V             & 116.0             & 120.0               & $3.33$              \\
+		I Bank Primary         & $I_{Bank,P}$    & A             & 1.013             & 1.20                & $18.4$              \\
+		I Phase Primary        & $I_{Phase,P}$   & A             & 0.585             & 0.693               & $18$                \\
+		I Bank Secondary       & $I_{Bank,S}$    & A             & 0.973             & 1.20                & $23$                \\
+		I Phase Secondary      & $I_{Phase,S}$   & A             & 0.742             & 0.693               & $-6.6$              \\
+		PQS1 (E1, I1) 3$\sim$  & $S_{3P}$        & VA            & 428               & 432                 & $0.01$              \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -32,10 +32,13 @@ a half in some places. This is probably be explanable. But I'm sleepy.
 % ANALYSIS: Part 2 tables
 %==========================================================
 
-\paragraph{} In part 2 of this lab we set up a residential 2 phase transformer circuit. The line voltage supplying the transformer
-is 208 V. And the secondary side will be able to supply 240/120V on the secondary side. The 120V is 2 phase power at phase angle
-$180^{\circ}$.
+\paragraph{} In Part 2 of this lab, we configured a single-phase transformer to replicate a residential distribution system.
+The primary side was supplied with 208 V from a three-phase source, while the secondary side supplied two 120 V legs that were 180$^\circ$
+out of phase, allowing us to connect both 120 V and 240 V loads.
 
+Table 2 shows the measured and calculated values with all three loads connected. We observed a decrease in secondary voltages of approximately 4.5\%
+to 5.6\%, likely due to the internal impedance of the transformer. The two 120 V loads drew nearly identical currents, resulting in a neutral current
+of only 0.009 A rather than the calculated 0 A. This difference could be due to slight variations in the loads or measuring equipment.
 \clearpage
 \begin{table}[htbp]
 	\centering

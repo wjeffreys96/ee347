@@ -9,7 +9,12 @@
 	\item[$S_{3P}$] - Total 3 Phase Apparent Power Rating
 	      \begin{center}
 		      \begin{align*}
-			      S_{3P} & = 3S_{\phi} = 3(250) = 750 \ VA
+			      S_{\phi} & =  V * I = 208 * 1.20 = 144 \ VA
+		      \end{align*}
+	      \end{center}
+	      \begin{center}
+		      \begin{align*}
+			      S_{3P} & = 3S_{\phi} = 3(144) = 432 \ VA
 		      \end{align*}
 	      \end{center}
 
@@ -38,12 +43,12 @@
 	      \begin{center}
 		      Primary:
 		      \begin{align*}
-			      \text{Wye: } I_{Bank,P}   & = \frac{250}{120} = 2.083 \ A                      \\
-			      \text{Delta: } I_{Bank,P} & = \sqrt{3}\left(\frac{250}{208}\right) = 2.082 \ A
+			      \text{Wye: } I_{Bank,P}   & = \frac{250}{208} = 1.20 \ A              \\
+			      \text{Delta: } I_{Bank,P} & = \left(\frac{250}{208}\right) = 1.20 \ A
 		      \end{align*}
 		      Secondary:
 		      \begin{align*}
-			      \text{Wye: } I_{Bank,S}   & = \frac{250}{120} = 2.083 \ A                      \\
+			      \text{Wye: } I_{Bank,S}   & = \frac{250}{208} = 1.20 \ A                       \\
 			      \text{Delta: } I_{Bank,S} & = \sqrt{3}\left(\frac{250}{120}\right) = 3.608 \ A
 		      \end{align*}
 	      \end{center}
@@ -80,13 +85,13 @@
 	      \begin{center}
 		      Primary:
 		      \begin{align*}
-			      \text{Wye: } I_{Phase,P}   & = 2.083 \ A                          \\
-			      \text{Delta: } I_{Phase,P} & = \frac{2.082}{\sqrt{3}} = 1.202 \ A
+			      \text{Wye: } I_{Phase,P}   & = 2.083 \ A                         \\
+			      \text{Delta: } I_{Phase,P} & = \frac{1.20}{\sqrt{3}} = 0.693 \ A
 		      \end{align*}
 		      Secondary:
 		      \begin{align*}
-			      \text{Wye: } I_{Phase,S}   & = 2.083 \ A                          \\
-			      \text{Delta: } I_{Phase,S} & = \frac{3.608}{\sqrt{3}} = 2.083 \ A
+			      \text{Wye: } I_{Phase,S}   & = 1.20 \ A                          \\
+			      \text{Delta: } I_{Phase,S} & = \frac{1.20}{\sqrt{3}} = 0.693 \ A
 		      \end{align*}
 	      \end{center}
 
