@@ -1,80 +1,160 @@
-
-\subsection{Calculations}
+%==========================================================
+% METHODS: Part 1 calculations
+%==========================================================
+\subsection{Calculations: Part 1}
 \begin{description}
 
-    \item[$S_{3P}$] - Total 3 Phase Apparent Power Rating
-    \begin{center}
-        \begin{align*}
-            S_{3P} &= 3S_{\phi} \\
-                   &= 3(250) \\
-                   &= 750 \ VA
-        \end{align*}
-    \end{center}
+	\item[$S_{3P}$] - Total 3 Phase Apparent Power Rating
+	      \begin{center}
+		      \begin{align*}
+			      S_{3P} & = 3S_{\phi} = 3(250) = 750 \ VA
+		      \end{align*}
+	      \end{center}
 
-    \item[$V_{Bank}$] - Line Voltage of the Transformer Bank
-    \begin{center}
-        Primary (All Configurations):
-        \begin{align*}
-            V_{Bank,P} &= 208 \ V
-        \end{align*}
-        Secondary:
-        \begin{align*}
-            \text{Wye: } V_{Bank,S} &= \sqrt{3}(120) = 207.85 \ V \\
-            \text{Delta: } V_{Bank,S} &= 120 \ V
-        \end{align*}
-    \end{center}
+	\item[$V_{Bank}$] - Line Voltage of the Transformer Bank
+	      \begin{center}
+		      Primary (All Configurations):
+		      \begin{align*}
+			      V_{Bank,P} & = 208 \ V
+		      \end{align*}
+		      Secondary:
+		      \begin{align*}
+			      \text{Wye: } V_{Bank,S}   & = \sqrt{3}(120) = 207.85 \ V \\
+			      \text{Delta: } V_{Bank,S} & = 120 \ V
+		      \end{align*}
+	      \end{center}
 
-    \item[$I_{Bank}$] - Line Current of the Transformer Bank
-    \begin{center}
-        Primary (Delta):
-        \begin{align*}
-            I_{Bank,P} &= \sqrt{3}\left(\frac{250}{208}\right) \\
-                       &= 2.08 \ A
-        \end{align*}
-        Primary (Wye):
-        \begin{align*}
-            I_{Bank,P} &= \frac{250}{120} \\
-                       &= 2.08 \ A
-        \end{align*}
-        Secondary (Wye):
-        \begin{align*}
-            I_{Bank,S} &= \frac{250}{120} \\
-                       &= 2.08 \ A
-        \end{align*}
-        Secondary (Delta):
-        \begin{align*}
-            I_{Bank,S} &= \sqrt{3}\left(\frac{250}{120}\right) \\
-                       &= 3.608 \ A
-        \end{align*}
-    \end{center}
+	\item[$I_{Bank}$] - Line Current of the Transformer Bank
+	      \begin{center}
+		      Primary:
+		      \begin{align*}
+			      \text{Wye: } I_{Bank,P}   & = \frac{250}{120} = 2.083 \ A                      \\
+			      \text{Delta: } I_{Bank,P} & = \sqrt{3}\left(\frac{250}{208}\right) = 2.082 \ A
+		      \end{align*}
+		      Secondary:
+		      \begin{align*}
+			      \text{Wye: } I_{Bank,S}   & = \frac{250}{120} = 2.083 \ A                      \\
+			      \text{Delta: } I_{Bank,S} & = \sqrt{3}\left(\frac{250}{120}\right) = 3.608 \ A
+		      \end{align*}
+	      \end{center}
 
-    \item[$V_{Phase}$] - Voltage in Each Phase of the Transformer Bank
-    \begin{center}
-        Primary:
-        \begin{align*}
-            \text{Wye: } V_{Phase,P} &= \frac{208}{\sqrt{3}} = 120.09 \ V \\
-            \text{Delta: } V_{Phase,P} &= 208 \ V
-        \end{align*}
-        Secondary:
-        \begin{align*}
-            \text{Wye: } V_{Phase,S} &= \frac{207.85}{\sqrt{3}} = 120 \ V \\
-            \text{Delta: } V_{Phase,S} &= 120 \ V
-        \end{align*}
-    \end{center}
+	\item[$V_{Phase}$] - Voltage in Each Phase of the Transformer Bank
+	      \begin{center}
+		      Primary:
+		      \begin{align*}
+			      \text{Wye: } V_{Phase,P}   & = \frac{208}{\sqrt{3}} = 120.09 \ V \\
+			      \text{Delta: } V_{Phase,P} & = 208 \ V
+		      \end{align*}
+		      Secondary:
+		      \begin{align*}
+			      \text{Wye: } V_{Phase,S}   & = \frac{207.85}{\sqrt{3}} = 120 \ V \\
+			      \text{Delta: } V_{Phase,S} & = 120 \ V
+		      \end{align*}
+	      \end{center}
 
-    \item[$I_{Phase}$] - Current in Each Phase of the Transformer Bank
-    \begin{center}
-        Primary:
-        \begin{align*}
-            \text{Wye: } I_{Phase,P} &= 1.202 \ A \\
-            \text{Delta: } I_{Phase,P} &= \frac{2.082}{\sqrt{3}} = 1.202 \ A
-        \end{align*}
-        Secondary:
-        \begin{align*}
-            \text{Wye: } I_{Phase,S} &= 2.083 \ A \\
-            \text{Delta: } I_{Phase,S} &= \frac{3.608}{\sqrt{3}} = 2.083 \ A
-        \end{align*}
-    \end{center}
+	\item[$I_{Phase}$] - Current in Each Phase of the Transformer Bank
+	      \begin{center}
+		      Primary:
+		      \begin{align*}
+			      \text{Wye: } I_{Phase,P}   & = 2.083 \ A                          \\
+			      \text{Delta: } I_{Phase,P} & = \frac{2.082}{\sqrt{3}} = 1.202 \ A
+		      \end{align*}
+		      Secondary:
+		      \begin{align*}
+			      \text{Wye: } I_{Phase,S}   & = 2.083 \ A                          \\
+			      \text{Delta: } I_{Phase,S} & = \frac{3.608}{\sqrt{3}} = 2.083 \ A
+		      \end{align*}
+	      \end{center}
 
 \end{description}
 
+%==========================================================
+% METHODS: Part 2 calculations
+%==========================================================
+\subsection{Calculations: Part 2}
+\begin{description}
+
+	\item[$V$] - Source and Secondary Voltages (ideal transformer, 208:120 per winding)
+	      \begin{center}
+		      Primary:
+		      \begin{align*}
+			      V_{Line} & = 208 \ V
+		      \end{align*}
+		      Secondary:
+		      \begin{align*}
+			      V_{H1}  & = 120\angle 0^\circ \ V     \\
+			      V_{H2}  & = 120\angle 180^\circ \ V   \\
+			      V_{240} & = V_{H1} - V_{H2} = 240 \ V
+		      \end{align*}
+	      \end{center}
+
+	\item[$Z_L$] - Load Impedances
+	      \begin{center}
+		      \begin{align*}
+			      Z_{L120} & = 1200 + j240 = 1223.8\angle 11.31^\circ \ \Omega \\
+			      Z_{L240} & = 1200 + j1200 = 1697.1\angle 45^\circ \ \Omega
+		      \end{align*}
+	      \end{center}
+
+	\item[$I$] - Branch Currents
+	      \begin{center}
+		      \begin{align*}
+			      I_{H1}  & = \frac{120\angle 0^\circ}{1223.8\angle 11.31^\circ} = 0.0981\angle -11.31^\circ \ A   \\
+			      I_{H2}  & = \frac{120\angle 180^\circ}{1223.8\angle 11.31^\circ} = 0.0981\angle 168.69^\circ \ A \\
+			      I_{240} & = \frac{240\angle 0^\circ}{1697.1\angle 45^\circ} = 0.1414\angle -45^\circ \ A
+		      \end{align*}
+	      \end{center}
+
+	\item[$S$] - Complex Power of Each Load, $S = VI^*$
+	      \begin{center}
+		      \begin{align*}
+			      S_{120} & = 120(0.0981)\angle 11.31^\circ = 11.54 + j2.31 \ VA \\
+			      S_{240} & = 240(0.1414)\angle 45^\circ = 24.00 + j24.00 \ VA
+		      \end{align*}
+	      \end{center}
+
+	\item[Full Load] - All Loads Connected
+	      \begin{center}
+		      Primary:
+		      \begin{align*}
+			      S_{Line} & = 2S_{120} + S_{240} = 47.08 + j28.62 = 55.09 \ VA \\
+			      P_{Line} & = 47.08 \ W                                        \\
+			      I_{Line} & = \frac{55.09}{208} = 0.265 \ A
+		      \end{align*}
+		      Secondary:
+		      \begin{align*}
+			      I_{N} & = I_{H1} + I_{H2} = 0 \ A
+		      \end{align*}
+	      \end{center}
+
+	\item[Imbalanced Load] - One 120 V Load Removed (H1 load open)
+	      \begin{center}
+		      Primary:
+		      \begin{align*}
+			      S_{Line} & = S_{120} + S_{240} = 35.54 + j26.31 = 44.22 \ VA \\
+			      P_{Line} & = 35.54 \ W                                       \\
+			      I_{Line} & = \frac{44.22}{208} = 0.213 \ A
+		      \end{align*}
+		      Secondary:
+		      \begin{align*}
+			      I_{H1} & = 0 \ A                          \\
+			      I_{H2} & = 0.0981 \ A                     \\
+			      I_{N}  & = |I_{H1} + I_{H2}| = 0.0981 \ A
+		      \end{align*}
+	      \end{center}
+
+	\item[No Load] - All Loads Open
+	      \begin{center}
+		      Primary:
+		      \begin{align*}
+			      I_{Line} & = 0 \ A, \quad P_{Line} = 0 \ W
+		      \end{align*}
+		      Secondary:
+		      \begin{align*}
+			      V_{H1} = V_{H2}         & = 120 \ V \\
+			      V_{240}                 & = 240 \ V \\
+			      I_{H1} = I_{H2} = I_{N} & = 0 \ A
+		      \end{align*}
+	      \end{center}
+
+\end{description}
