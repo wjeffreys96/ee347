@@ -34,7 +34,7 @@ a half in some places. This is probably be explanable. But I'm sleepy.
 
 \paragraph{} In part 2 of this lab we set up a residential 2 phase transformer circuit. The line voltage supplying the transformer
 is 208 V. And the secondary side will be able to supply 240/120V on the secondary side. The 120V is 2 phase power at phase angle
-$180^{\circ}$. ... More interesting analysis.... Why are there blank measurements in the no load test?
+$180^{\circ}$.
 
 \clearpage
 \begin{table}[htbp]
@@ -60,6 +60,9 @@ $180^{\circ}$. ... More interesting analysis.... Why are there blank measurement
 	\end{tabular}
 \end{table}
 
+\subsection{Full Load}
+\paragraph{}Table 2 shows the measured and calculated values with all three loads connected. We observed a decrease in secondary voltages of approximately 4.5% to 5.6%, likely due to the internal impedance of the transformer. The two 120 V loads drew nearly identical currents, resulting in a neutral current of only 0.009 A rather than the calculated 0 A. This difference could be due to slight variations in the loads or measuring equipment.
+
 \begin{table}[htbp]
 	\centering
 	\caption{Part 2: No load, measured (average of 3 readings) vs. calculated}
@@ -83,6 +86,9 @@ $180^{\circ}$. ... More interesting analysis.... Why are there blank measurement
 	\end{tabular}
 \end{table}
 %
+\subsection{No Load}
+\paragraph{}Table 3 shows the results with all loads disconnected. Without loading on the secondary side, the voltages increased to within 0.5% of their calculated values. A small amount of current and power was still measured on the primary side due to the magnetization of the core and transformer losses. Small measurements on the secondary side were likely due to limitations of the measuring equipment. Percentage errors could not be calculated where the expected values were 0.
+
 \begin{table}[htbp]
 	\centering
 	\caption{Part 2: Imbalanced load (H1 load open), measured vs. calculated}
@@ -105,4 +111,9 @@ $180^{\circ}$. ... More interesting analysis.... Why are there blank measurement
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+\subsection{Imbalanced Load}
+\paragraph{}Table 4 shows the results after disconnecting the 120 V load on H1. With less loading, we observed a slight increase in secondary voltages and a decrease in primary current and power. The most noticeable difference was the increase in neutral current from 0.009 A to 0.088 A. This was expected as the current from the remaining 120 V load was no longer being canceled out by the opposing load.
+Through these tests, we were able to observe the effects of loading on the secondary voltage of a transformer and the importance of balancing loads within a residential distribution system to minimize neutral current.
+
 \clearpage

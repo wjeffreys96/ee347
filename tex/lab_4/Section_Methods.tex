@@ -4,6 +4,8 @@
 \subsection{Calculations: Part 1}
 \begin{description}
 
+\begin{description}
+
 	\item[$S_{3P}$] - Total 3 Phase Apparent Power Rating
 	      \begin{center}
 		      \begin{align*}
@@ -12,6 +14,10 @@
 	      \end{center}
 
 	\item[$V_{Bank}$] - Line Voltage of the Transformer Bank
+	      \begin{center}
+		      Wye/Delta: $V_{Bank} = V_{Rated}$
+	      \end{center}
+
 	      \begin{center}
 		      Primary (All Configurations):
 		      \begin{align*}
@@ -25,6 +31,10 @@
 	      \end{center}
 
 	\item[$I_{Bank}$] - Line Current of the Transformer Bank
+	      \begin{center}
+		      Wye/Delta: $I_{Bank} = I_{Rated}$
+	      \end{center}
+
 	      \begin{center}
 		      Primary:
 		      \begin{align*}
@@ -40,6 +50,14 @@
 
 	\item[$V_{Phase}$] - Voltage in Each Phase of the Transformer Bank
 	      \begin{center}
+		      Wye: $V_{Phase} = \frac{V_{Bank}}{\sqrt{3}}$
+	      \end{center}
+	      \begin{center}
+		      Delta: $V_{Phase} = V_{Bank}$
+	      \end{center}
+
+
+	      \begin{center}
 		      Primary:
 		      \begin{align*}
 			      \text{Wye: } V_{Phase,P}   & = \frac{208}{\sqrt{3}} = 120.09 \ V \\
@@ -53,6 +71,12 @@
 	      \end{center}
 
 	\item[$I_{Phase}$] - Current in Each Phase of the Transformer Bank
+	      \begin{center}
+		      Wye: $I_{Phase} = I_{Bank}$
+	      \end{center}
+	      \begin{center}
+		      Delta: $I_{Phase} = \frac{I_{Bank}}{\sqrt{3}}$
+	      \end{center}
 	      \begin{center}
 		      Primary:
 		      \begin{align*}
